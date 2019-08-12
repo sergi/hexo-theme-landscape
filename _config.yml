@@ -1,23 +1,24 @@
 # Header
 menu:
   Home: /
+  About: /about
   Archives: /archives
 rss: /atom.xml
-banner: "images/banner.jpg"
 
 # Content
 excerpt_link: Read More
-fancybox: true
-recent_posts_limits: 5
+fancybox: false
+recent_posts_limits: 20
 
+banner: images/sergi-nordicjs.jpg
 # Sidebar
 sidebar: right
 widgets:
-- category
-- tag
-- tagcloud
-- archive
+# - category
+# - tag
 - recent_posts
+# - archive
+- tagcloud
 
 # display widgets at the bottom of index pages (pagination == 2)
 index_widgets:
@@ -33,7 +34,8 @@ show_count: false
 google_analytics:
 gauges_analytics:
 favicon: /favicon.png
-twitter:
+twitter: sergimansilla
+google_plus:
 fb_admins:
 fb_app_id:
 

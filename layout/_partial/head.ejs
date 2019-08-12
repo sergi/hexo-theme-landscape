@@ -28,9 +28,16 @@
     <link rel="icon" href="<%- theme.favicon %>">
   <% } %>
   <% if (config.highlight.enable){ %>
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+    <!-- <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css"> -->
   <% } %>
   <%- css('css/style') %>
+  <style>
+  /* @import url('https://rsms.me/inter/inter.css');
+html { font-family: 'Inter', sans-serif; }
+@supports (font-variation-settings: normal) {
+  html { font-family: 'Inter var', sans-serif; }
+} */
+</style>
   <% if (theme.fancybox){ %>
     <%- css('fancybox/jquery.fancybox.min.css') %>
   <% } %>
