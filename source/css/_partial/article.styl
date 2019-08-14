@@ -46,6 +46,9 @@
   p, table
     line-height: line-height
     margin: line-height 0
+    @media mq-mobile
+      line-height: line-height * 0.9
+      font-size: font-size * 0.9
   h1, h2, h3, h4, h5, h6
     font-weight: bold
   h1, h2, h3, h4, h5, h6
@@ -78,10 +81,32 @@
     border-bottom: 1px solid color-border
     padding: 10px 0
   blockquote
-    font-family: font-serif
-    font-size: 1.4em
-    margin: line-height 20px
-    text-align: center
+    &:before
+      font-family: "Cardo", serif;
+      content: "\201C";
+      color:#555555;
+      font-size:4em;
+      position: absolute;
+      left: 10px;
+      top:-10px;
+    // font-family: font-serif
+    // font-size: 1.4em
+    // margin: line-height 20px
+    text-align: left
+    width: 80%
+    font-size: 1.4em;
+    // margin:50px auto;
+    // font-family:Open Sans;
+    font-style:italic;
+    color: #555555;
+    padding:1.2em 30px 1.2em 75px;
+    border-left:8px solid #555555 ;
+    line-height:1.6;
+    position: relative;
+    // background:#EDEDED;
+    p
+      margin: 0
+
     footer
       font-size: font-size
       margin: line-height 0

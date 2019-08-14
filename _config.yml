@@ -12,7 +12,7 @@ recent_posts_limits: 20
 
 banner: images/sergi-nordicjs.jpg
 # Sidebar
-sidebar: right
+sidebar: false
 widgets:
 # - category
 # - tag
