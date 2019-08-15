@@ -6,23 +6,40 @@
         <a href="<%- url_for() %>" id="logo"><%= config.title %></a>
       </h1>
       <% if (theme.subtitle){ %>
-        <h2 id="subtitle-wrap">
-          <a href="<%- url_for() %>" id="subtitle"><%= theme.subtitle %></a>
-        </h2>
+      <h2 id="subtitle-wrap">
+        <a href="<%- url_for() %>" id="subtitle"><%= theme.subtitle %></a>
+      </h2>
       <% } %>
     </div>
     <div id="header-inner" class="inner">
       <nav id="main-nav">
         <a id="main-nav-toggle" class="nav-icon"></a>
         <% for (var i in theme.menu){ %>
-          <a class="main-nav-link" href="<%- url_for(theme.menu[i]) %>"><%= i %></a>
+        <a class="main-nav-link" href="<%- url_for(theme.menu[i]) %>"><%= i %></a>
         <% } %>
       </nav>
       <nav id="sub-nav">
+        <a id="nav-linkedin-link" href="https://www.linkedin.com/in/smansilla/" class="nav-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+            <path fill="white"
+              d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+          </svg>
+        </a>
         <% if (theme.rss){ %>
-          <a id="nav-rss-link" class="nav-icon" href="<%- url_for(theme.rss) %>" title="<%= __('rss_feed') %>"></a>
+        <a id="nav-rss-link2" class="nav-icon" href="<%- url_for(theme.rss) %>" title="<%= __('rss_feed') %>">
+          <svg fill="white" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+            <path
+              d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-12.832 20c-1.197 0-2.168-.969-2.168-2.165s.971-2.165 2.168-2.165 2.167.969 2.167 2.165-.97 2.165-2.167 2.165zm5.18 0c-.041-4.029-3.314-7.298-7.348-7.339v-3.207c5.814.041 10.518 4.739 10.561 10.546h-3.213zm5.441 0c-.021-7.063-5.736-12.761-12.789-12.792v-3.208c8.83.031 15.98 7.179 16 16h-3.211z" />
+            </svg>
+        </a>
         <% } %>
-        <a id="nav-search-btn" class="nav-icon" title="<%= __('search') %>"></a>
+        <a id="nav-search-btn2" class="nav-icon" title="<%= __('search') %>">
+          <svg fill="white" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+            <path
+              d="M23.832 19.641l-6.821-6.821c2.834-5.878-1.45-12.82-8.065-12.82-4.932 0-8.946 4.014-8.946 8.947 0 6.508 6.739 10.798 12.601 8.166l6.879 6.879c1.957.164 4.52-2.326 4.352-4.351zm-14.886-4.721c-3.293 0-5.973-2.68-5.973-5.973s2.68-5.973 5.973-5.973c3.294 0 5.974 2.68 5.974 5.973s-2.68 5.973-5.974 5.973z" />
+            </svg>
+
+        </a>
       </nav>
       <div id="search-form-wrap">
         <%- search_form({button: '&#xF002;', text: __('search')}) %>
