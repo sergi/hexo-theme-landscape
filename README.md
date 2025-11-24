@@ -58,7 +58,6 @@ widgets:
 # Miscellaneous
 google_analytics:
 favicon: /favicon.png
-twitter:
 ```
 
 - **menu** - Navigation menu
@@ -71,7 +70,6 @@ twitter:
 - **widgets** - Widgets displaying in sidebar
 - **google_analytics** - Google Analytics ID
 - **favicon** - Favicon path
-- **twitter** - Twiiter ID
 
 ## Features
 

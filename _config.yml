@@ -33,8 +33,6 @@ show_count: false
 # google_analytics: UA-1807855-7
 gauges_analytics:
 favicon: /favicon.png
-twitter: sergimansilla
-google_plus:
 fb_admins:
 fb_app_id:
 
