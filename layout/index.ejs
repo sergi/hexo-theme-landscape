@@ -1,5 +1,3 @@
-<!-- <%- partial('_partial/archive', {pagination: 2, index: true}) %> -->
-<!-- <%- partial('_partial/article', {post: page, index: true}) %> -->
-<% page.posts.each(function(post){ %>
+<% page.posts.limit(1).each(function(post){ %>
   <%- partial('_partial/article', {post: post, index: false}) %>
 <% }) %>
