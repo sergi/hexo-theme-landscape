@@ -1,5 +1,7 @@
 .article
   margin: block-margin 0
+  @media mq-mobile
+    margin: 32px 0
 
 .article-inner
   @extend $block
@@ -34,7 +36,9 @@
 
 .article-title
   text-decoration: none
-  font-size: 1.5em
+  font-size: 2em
+  @media mq-mobile
+    font-size: 1.6em
   font-weight: bold
   color: color-default
   line-height: line-height-title
@@ -47,25 +51,26 @@
   clearfix()
   color: color-default
   padding: 0 article-padding
+  @media mq-mobile
+    font-size: 18px
   p, table
     line-height: line-height
-    margin: line-height 0
+    margin: 1.2em 0
     @media mq-mobile
-      line-height: line-height * 0.9
-      font-size: font-size
+      line-height: 1.6
   h1, h2, h3, h4, h5, h6
     font-weight: bold
-  h1, h2, h3, h4, h5, h6
-    line-height: line-height-title
-    margin: line-height-title 0
+    line-height: 1.25
+    // More space above than below, so a heading sits with the text it introduces
+    margin: 1.8em 0 0.6em
   a
     color: color-link
     text-decoration: none
     &:hover
       text-decoration: underline
   ul, ol, dl
-    margin-top: line-height
-    margin-bottom: line-height
+    margin-top: 1.2em
+    margin-bottom: 1.2em
   img, video
     max-width: 100%
     height: auto
@@ -194,12 +199,6 @@
   position: relative
   @media mq-normal
     margin: block-margin 0
-    &:before
-      absolute-center(8px)
-      content: ""
-      border-radius: 50%
-      background: color-border
-      box-shadow: 0 1px 2px #fff
 
 .article-nav-link-wrap
   text-decoration: none
@@ -230,7 +229,8 @@
 .article-nav-caption
   text-transform: uppercase
   letter-spacing: 2px
-  color: color-border
+  color: #999
+  font-size: 0.7em
   line-height: 1em
   font-weight: bold
   #article-nav-newer &

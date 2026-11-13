@@ -32,9 +32,12 @@ body
   max-width: (column-width + gutter-width) * columns + gutter-width
   margin: 0 auto
   padding: 0 gutter-width
+  @media mq-mobile
+    padding: 0 20px
 
+// Full width of .outer, so the header and footer line up with the article column
 .inner
-  column(columns)
+  width: 100%
 
 
 .left, .alignleft

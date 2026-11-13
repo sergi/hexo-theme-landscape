@@ -1,21 +1,16 @@
 #header
-  height: banner-height
+  height: 40px
   position: relative
   view-transition-name: site-header
   // border-bottom: 1px solid color-border
-  &:before, &:after
+  &:before
     content: ""
     position: absolute
     left: 0
     right: 0
     height: 40px
-  &:before
     top: 0
     background: black
-    // background:linear-gradient(rgba(0, 0, 0, 0.2), transparent)
-  &:after
-    bottom: 0
-    // background: linear-gradient(transparent, rgba(0, 0, 0, 0.2))
 
 #header-outer
   height: 100%
@@ -66,7 +61,7 @@ $logo-text
 
 #main-nav
   float: left
-  // margin-left: -15px
+  margin-left: -10px
 
 $nav-link
   float: right
@@ -77,6 +72,7 @@ $nav-link
   transition: opacity 0.2s
   display: block
   padding: 10px 10px
+  line-height: 20px
   &:hover
     opacity: 1
 
@@ -95,8 +91,6 @@ $nav-link
   @extend $nav-link
   font-weight: 300
   letter-spacing: 1px
-  // @media mq-mobile
-    // display: none
 
 // #main-nav-toggle
 //   display: none
@@ -108,4 +102,4 @@ $nav-link
 
 #sub-nav
   float: right
-  // margin-right: -15px
+  margin-right: -10px
