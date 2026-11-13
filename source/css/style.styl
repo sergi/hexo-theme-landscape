@@ -24,6 +24,13 @@ input, button
 //        url(font-icon-path + ".svg?v=" + font-icon-version + "#fontawesomeregular") format("svg")
 
 
+@view-transition
+  navigation: auto
+
+@media (prefers-reduced-motion: reduce)
+  @view-transition
+    navigation: none
+
 html, body, #container
   height: 100%
 
