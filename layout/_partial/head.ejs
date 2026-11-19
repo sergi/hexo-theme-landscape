@@ -36,6 +36,9 @@
     <!-- <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css"> -->
   <% } %>
   <%- css('css/style') %>
+  <% if (theme.analytics && theme.analytics.goatcounter){ %>
+  <script data-goatcounter="<%= theme.analytics.goatcounter %>" async src="//gc.zgo.at/count.js"></script>
+  <% } %>
   <script type="speculationrules">
   {
     "prerender": [{
