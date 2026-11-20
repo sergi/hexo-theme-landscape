@@ -6,7 +6,8 @@ vendor-prefixes = webkit moz ms official
 color-default = #373737
 color-grey = #666
 color-border = #ddd
-color-link = #258fb8
+// AA-compliant link color: ~5.7:1 on white (the old #258fb8 was ~3.7:1)
+color-link = #1b6e8e
 color-background = #fff
 color-sidebar-text = #777
 color-widget-background = #ddd
@@ -17,13 +18,14 @@ color-facebook = #3b5998
 color-pinterest = #cb2027
 color-linkedin = #0077B5
 
-// Fonts
-font-sans = 'Inter', -apple-system, BlinkMacSystemFont,
-    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
-    "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif
-font-serif = "PT Serif", Garamond, Georgia, serif
-font-mono = "PT Mono", "Source Code Pro", Consolas, Menlo, Monaco, monospace
+// Fonts — system stacks only; the site serves no webfont files, so the
+// stacks must be fonts visitors actually have. Georgia is what the old
+// "PT Serif" fallback resolved to on most machines anyway.
+font-sans = -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif
+font-serif = Georgia, Cambria, "Times New Roman", Times, serif
+font-mono = ui-monospace, "SF Mono", "Cascadia Mono", Menlo, Consolas,
+    "DejaVu Sans Mono", monospace
 font-icon = FontAwesome
 font-icon-path = "fonts/fontawesome-webfont"
 font-icon-version = "4.7.0"

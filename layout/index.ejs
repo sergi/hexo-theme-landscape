@@ -1,3 +1,18 @@
-<% page.posts.limit(1).each(function(post){ %>
-  <%- partial('_partial/article', {post: post, index: false}) %>
-<% }) %>
+<% var posts = page.posts.toArray(); %>
+<% if (posts.length){ %>
+  <%- partial('_partial/article', {post: posts[0], index: true}) %>
+
+  <% if (posts.length > 1){ %>
+    <section class="archives-wrap" id="recent-articles">
+      <div class="archive-year-wrap">
+        <h2 class="archive-year">Previous articles</h2>
+      </div>
+      <div class="archives">
+        <% posts.slice(1, 11).forEach(function(post){ %>
+          <%- partial('_partial/archive-post', {post: post}) %>
+        <% }) %>
+      </div>
+    </section>
+    <p id="all-articles-link"><a href="<%- url_for(config.archive_dir) %>">All articles &rarr;</a></p>
+  <% } %>
+<% } %>
